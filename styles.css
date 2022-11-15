@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-grey : rgb(30, 30, 30);
+    --bg-grey : #EAEDF0;
+    --form-bg : #F6F7F8;
+    --form-border: #D6D9DC;
+    --cute-blue: #407FC7;
+}
+
+body {
+    color: var(--dark-grey);
+    background-color: var(--bg-grey);
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-form-header {
+    text-align: center;
+    background-color: var(--form-bg);
+    border: 1px solid var(--form-border);
+    border-radius: 3px;
+
+    width: 80%;
+    margin: 40px 0;
+    padding: 50px;
+}
+
+.speaker-form-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.speaker-form {
+    background-color: var(--form-bg);
+    border: 1px solid var(--form-border);
+    border-radius: 3px;
+    
+    width: 80%;
+    padding: 50px;
+    margin: 0 0 40px 0;
+}
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'] {
+    background-color: #FFFFFF;
+    border: 1px solid var(--form-border);
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 700px) {
+    .speaker-form-header,
+    .speaker-form {
+      width: 600px;
+    }
+    .form-row {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .form-row input[type='text'],
+    .form-row input[type='email'],
+    .form-row select,
+    .form-row textarea {
+      width: 250px;
+      height: initial;
+    }
+    .form-row label {
+      text-align: right;
+      width: 120px;
+      margin-top: 7px;
+      padding-right: 20px;
+    }
+    .legacy-form-row {
+        margin-bottom: 10px;
+    }
+      .legacy-form-row legend {
+        width: 120px;
+        text-align: right;
+        padding-right: 20px;
+    }
+      .legacy-form-row legend {
+        float: left;
+    }
+    .form-row .instructions {
+        margin-left: 120px;
+    }
+    .form-row .checkbox-label {
+        margin-left: 120px;
+        width: auto;
+    }
+    .form-row button {
+        margin: auto
+    }
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid {
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none;
+}
+
+.legacy-form-row {
+    border: none;
+    margin-bottom: 40px;
+}
+
+.legacy-form-row legend {
+    margin-bottom: 15px;
+}
+
+.legacy-form-row .radio-label {
+    display: block;
+    font-size: 14px;
+    padding: 0 20px 0 10px;
+}
+
+.legacy-form-row input[type='radio'] {
+    margin-top: 2px;
+    accent-color: var(--cute-blue);
+}
+    
+.legacy-form-row .radio-label,
+.legacy-form-row input[type='radio'] {
+    float: left;
+}
+.form-row select {
+    padding: 5px;
+    font-size: 14px;
+    -webkit-appearance: none;
+}
+.form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    text-indent: 10px;
+  
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+}
+  
+  .form-row .instructions {
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.form-row .checkbox-label {
+    margin-bottom: 0;
+    accent-color: var(--cute-blue);
+}
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    margin: auto;
+  
+    color: #FFFFFF;
+    background-color: var(--cute-blue);
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+  
+  .form-row button:hover {
+    background-color: #2289ff;
+}
+  
+  .form-row button:active {
+    background-color: var(--cute-blue);
+}
+input,
+textarea{
+    outline: none;
+}
+.form-row input[type='text']:focus,
+.form-row input[type='email']:focus,
+.form-row textarea:focus {
+    border: 3px solid var(--cute-blue);
+}
